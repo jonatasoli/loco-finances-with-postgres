@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+View transaction: {{ item.id }}
+{% endblock title %}
+
+{% block page_title %}
+View transaction: {{ item.id }}
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="mb-10">
+    <div>
+    <label><b>{{"date" | capitalize }}:</b> {{item.date}}</label>
+    </div>
+<div>
+    <label><b>{{"kind" | capitalize }}:</b> {{item.kind}}</label>
+    </div>
+<div>
+    <label><b>{{"amount" | capitalize }}:</b> {{item.amount}}</label>
+    </div>
+<div>
+    <label><b>{{"description" | capitalize }}:</b> {{item.description}}</label>
+    </div>
+<div>
+    <label><b>{{"tag" | capitalize }}:</b> {{item.tag}}</label>
+    </div>
+<br />
+<a href="/transactions">Back to transactions</a>
+</div>
+{% endblock content %}
